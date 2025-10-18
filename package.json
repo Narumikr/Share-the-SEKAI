@@ -1,12 +1,13 @@
 {
-  "name": "btw-untitled-sekai",
+  "name": "share-the-sekai",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint .  --no-cache --fix --max-warnings=0"
+    "lint": "npx eslint .  --no-cache --fix --max-warnings=0",
+    "local": "bash scripts/install-untitled-lib.sh && npm run dev"
   },
   "dependencies": {
     "next": "15.5.4",
