@@ -1,18 +1,9 @@
-import { Geist, Geist_Mono } from 'next/font/google'
+import { MySekaiProvider } from '@/components/MySekaiProvider'
 
 import type { Metadata } from 'next'
 
 import '@/styles/globals.css'
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
+import '@naru/untitled-ui-library/color/sekai-colors.css'
 
 export const metadata: Metadata = {
   title: 'Home | B.T.W',
@@ -22,11 +13,11 @@ export const metadata: Metadata = {
 interface RootLayoutProps {
   children: React.ReactNode
 }
-export const RootLayout = ({ children }: RootLayoutProps) => {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="ja">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+      <body className="antialiased">
+        <MySekaiProvider>{children}</MySekaiProvider>
       </body>
     </html>
   )

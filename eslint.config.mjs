@@ -130,6 +130,11 @@ const eslintConfig = [
               position: 'before',
             },
             {
+              pattern: '@/features/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
               pattern: '@/lib/**',
               group: 'internal',
             },
