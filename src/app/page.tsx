@@ -5,7 +5,7 @@ import { IntoSekai } from '@/features/IntoSekai'
 const Home = () => {
   return (
     <IntoSekai>
-      <SekaiBodyText className="w-full text-center text-[39px]">Hello SEKAI !</SekaiBodyText>
+      <SekaiBodyText className="w-full text-center !text-[39px]">Hello SEKAI !</SekaiBodyText>
     </IntoSekai>
   )
 }
