@@ -10,6 +10,7 @@
     "local": "bash scripts/install-untitled-lib.sh && npm run dev"
   },
   "dependencies": {
+    "@naru/untitled-ui-library": "github:Narumikr/untitled#release/untitled",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"

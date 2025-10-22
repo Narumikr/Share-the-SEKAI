@@ -1,8 +1,12 @@
-export const Home = () => {
+import { SekaiBodyText } from '@naru/untitled-ui-library'
+
+import { IntoSekai } from '@/features/IntoSekai'
+
+const Home = () => {
   return (
-    <div className="flex items-center justify-items-center min-h-screen">
-      <p className="w-full text-center text-[39px]">Hello SEKAI !</p>
-    </div>
+    <IntoSekai>
+      <SekaiBodyText className="w-full text-center !text-[39px]">Hello SEKAI !</SekaiBodyText>
+    </IntoSekai>
   )
 }
 export default Home
