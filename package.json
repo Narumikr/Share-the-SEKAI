@@ -7,13 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "npx eslint .  --no-cache --fix --max-warnings=0",
+    "prettier": "npx prettier --write . --ignore-path .prettierignore",
     "local": "bash scripts/install-untitled-lib.sh && npm run dev"
   },
   "dependencies": {
     "@naru/untitled-ui-library": "github:Narumikr/untitled#release/untitled",
+    "i18next": "^25.6.0",
+    "i18next-resources-to-backend": "^1.2.1",
     "next": "15.5.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-i18next": "^16.1.3"
   },
   "devDependencies": {
     "@eslint/compat": "^1.4.0",

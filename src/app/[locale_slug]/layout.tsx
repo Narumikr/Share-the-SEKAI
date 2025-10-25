@@ -1,7 +1,7 @@
-import { MySekaiProvider } from '@/components/MySekaiProvider'
+import { notFound } from 'next/navigation'
 
-import '@/styles/globals.css'
-import '@naru/untitled-ui-library/color/sekai-colors.css'
+import { languages } from '@/i18n/config'
+import { I18nProvider } from '@/i18n/I18nextProvider'
 import { getTranslation } from '@/i18n/lib/server'
 
 import type { Locale } from '@/i18n/config'
@@ -21,16 +21,18 @@ export const generateMetadata = async ({ params }: MetadataProps): Promise<Metad
   }
 }
 
-interface RootLayoutProps {
+interface LocaleLayoutProps {
   children: React.ReactNode
+  params: Promise<{ locale_slug: Locale }>
 }
-const RootLayout = ({ children }: RootLayoutProps) => {
-  return (
-    <html lang="ja">
-      <body className="antialiased">
-        <MySekaiProvider>{children}</MySekaiProvider>
-      </body>
-    </html>
-  )
+
+const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
+  const { locale_slug } = await params
+
+  if (!languages.includes(locale_slug)) {
+    notFound()
+  }
+
+  return <I18nProvider locale={locale_slug}>{children}</I18nProvider>
 }
-export default RootLayout
+export default LocaleLayout
