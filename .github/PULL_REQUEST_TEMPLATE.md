@@ -1,5 +1,5 @@
 <!-- prettier-ignore-start -->
-![PR-Header](https://capsule-render.vercel.app/api?type=slice&height=39&color=0:ffc096,100:99ccff&section=header&reversal=false)
+![PR-Header](https://capsule-render.vercel.app/api?type=slice&height=39&color=0:00bbdd,100:ddaacc&section=header&reversal=false)
 
 ### 🌸 作業概要 🌸
 
@@ -44,5 +44,5 @@
 
 <!-- ちょっとXXに課題が残っている...など何かあれば備忘のためにも -->
 
-![PR-Foorter](https://capsule-render.vercel.app/api?type=slice&height=39&color=0:ffc096,100:99ccff&section=footer&reversal=false)
+![PR-Foorter](https://capsule-render.vercel.app/api?type=slice&height=39&color=0:00bbdd,100:ddaacc&section=footer&reversal=false)
 <!-- prettier-ignore-end -->
