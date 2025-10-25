@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation'
 
-import { languages, type Locale } from '@/i18n/config'
+import { languages } from '@/i18n/config'
 import { I18nProvider } from '@/i18n/I18nextProvider'
 import { getTranslation } from '@/i18n/lib/server'
 
+import type { Locale } from '@/i18n/config'
 import type { Metadata } from 'next'
 
 type MetadataProps = {
@@ -20,12 +21,12 @@ export const generateMetadata = async ({ params }: MetadataProps): Promise<Metad
   }
 }
 
-interface RootLayoutProps {
+interface LocaleLayoutProps {
   children: React.ReactNode
   params: Promise<{ locale_slug: Locale }>
 }
 
-const LocaleLayout = async ({ children, params }: RootLayoutProps) => {
+const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
   const { locale_slug } = await params
 
   if (!languages.includes(locale_slug)) {
