@@ -8,11 +8,12 @@ import type { Locale } from '@/i18n/config'
 import type { Metadata } from 'next'
 
 type MetadataProps = {
-  params: { locale: Locale }
+  params: Promise<{ locale: Locale }>
 }
 
 export const generateMetadata = async ({ params }: MetadataProps): Promise<Metadata> => {
-  const { t } = await getTranslation(params.locale, 'common')
+  const { locale } = await params
+  const { t } = await getTranslation(locale, 'common')
   const title = t('meta.sitename').replace('{0}', t('meta.title'))
 
   return {
