@@ -8,11 +8,12 @@ import type { Locale } from '@/i18n/config'
 import type { Metadata } from 'next'
 
 type MetadataProps = {
-  params: { locale: Locale }
+  params: Promise<{ locale: Locale }>
 }
 
 export const generateMetadata = async ({ params }: MetadataProps): Promise<Metadata> => {
-  const { t } = await getTranslation(params.locale, 'common')
+  const { locale } = await params
+  const { t } = await getTranslation(locale, 'common')
   const title = t('meta.sitename').replace('{0}', t('meta.title'))
 
   return {
@@ -23,16 +24,16 @@ export const generateMetadata = async ({ params }: MetadataProps): Promise<Metad
 
 interface LocaleLayoutProps {
   children: React.ReactNode
-  params: Promise<{ locale_slug: Locale }>
+  params: Promise<{ locale_slug: string }>
 }
 
 const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
   const { locale_slug } = await params
 
-  if (!languages.includes(locale_slug)) {
+  if (!languages.includes(locale_slug as Locale)) {
     notFound()
   }
 
-  return <I18nProvider locale={locale_slug}>{children}</I18nProvider>
+  return <I18nProvider locale={locale_slug as Locale}>{children}</I18nProvider>
 }
 export default LocaleLayout
