@@ -19,7 +19,7 @@ export const IntoSekai = ({ children }: IntoSekaiProps) => {
   }
 
   return (
-    <div className="flex-center min-h-screen">
+    <div className="flex-center h-full">
       {children}
       <IntoTheSekai execEvent={handleChangeSekai} />
     </div>
