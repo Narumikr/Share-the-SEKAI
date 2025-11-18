@@ -13,7 +13,7 @@ export const generateMetadata = (): Metadata => {
 }
 const Top = () => {
   return (
-    <div className="flex items-center justify-items-center min-h-screen">
+    <div className="flex items-center justify-items-center h-full">
       <p className="w-full text-center text-[39px]">Coming Soon</p>
     </div>
   )
