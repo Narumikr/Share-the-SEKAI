@@ -120,17 +120,22 @@ const eslintConfig = [
               position: 'before',
             },
             {
-              pattern: '@/app/**',
+              pattern: '@/types/**',
               group: 'internal',
               position: 'before',
             },
             {
-              pattern: '@/components/**',
+              pattern: '@/constants/**',
               group: 'internal',
               position: 'before',
             },
             {
-              pattern: '@/features/**',
+              pattern: '@/context/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@/provider/**',
               group: 'internal',
               position: 'before',
             },
@@ -147,17 +152,18 @@ const eslintConfig = [
               group: 'internal',
             },
             {
-              pattern: '@/types/**',
-              group: 'internal',
-            },
-            {
-              pattern: '@/styles/**',
+              pattern: '@/components/**',
               group: 'internal',
               position: 'after',
             },
             {
-              pattern: './*.module.scss',
-              group: 'sibling',
+              pattern: '@/features/**',
+              group: 'internal',
+              position: 'after',
+            },
+            {
+              pattern: '@/styles/**',
+              group: 'internal',
               position: 'after',
             },
           ],
