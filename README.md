@@ -10,6 +10,7 @@
 [![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)](#)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)](#)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white)](#)
+[![Lucide React](https://img.shields.io/badge/Lucide_React-F56565?style=flat&logo=react&logoColor=white)](#)
 
 ### 💫 **_The purpose_** 💫![Leo/need-divider](https://capsule-render.vercel.app/api?type=rect&height=2&color=0:3367cc,100:f5f5f7)
 
