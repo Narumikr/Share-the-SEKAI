@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import './animation.css';
+@import './utilities.css';
 
 html,
 body {
@@ -12,54 +14,4 @@ p {
 
 button {
   padding: 0;
-}
-
-@keyframes scaleUp {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@layer utilities {
-  .invisible-scroll {
-    overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE, Edge */
-  }
-  .invisible-scroll::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .abs-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .animate-scale-up {
-    animation: scaleUp 5s ease-in-out infinite;
-  }
-  .animate-fade-out {
-    animation: fade-out 2s ease-in-out forwards;
-  }
 }
