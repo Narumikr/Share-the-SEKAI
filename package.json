@@ -14,7 +14,7 @@
     "@naru/untitled-ui-library": "github:Narumikr/untitled",
     "clsx": "^2.1.1",
     "lucide-react": "^0.562.0",
-    "next": "16.0.8",
+    "next": "16.1.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "^3.4.0"
